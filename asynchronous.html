@@ -72,7 +72,39 @@
 
     factorialize(0);
     */
-    
+
+    // Find the Longest Word in a String*************
+
+
+    // convert string to array, check world lenght, save the length in a variable, compare and return the longest world
+
+    var words, longestWord, highestNum;
+    highestNum = 0;
+    longestWord = '';
+    function findLongestWordLength(str) {
+      //convert string to array
+      words = str.split(' ');
+      //check world length
+      for(let word of words){
+        getWordLength = word.length;
+        if (getWordLength > highestNum){
+          highestNum = getWordLength;
+          longestWord = word;
+        } 
+      }
+      console.log(longestWord);
+      return longestWord;
+    }
+
+    findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+// Solution N2
+function findLongestWordLength2(str) {
+  return Math.max(...str.split(" ").map(word => word.length));
+}
+
+findLongestWordLength2("The quick brown fox jumped over the lazy dog");
 
 
 
