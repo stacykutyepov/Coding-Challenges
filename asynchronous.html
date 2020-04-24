@@ -74,37 +74,74 @@
     */
 
     // Find the Longest Word in a String*************
-
-
     // convert string to array, check world lenght, save the length in a variable, compare and return the longest world
-
-    var words, longestWord, highestNum;
-    highestNum = 0;
-    longestWord = '';
-    function findLongestWordLength(str) {
-      //convert string to array
-      words = str.split(' ');
-      //check world length
-      for(let word of words){
-        getWordLength = word.length;
-        if (getWordLength > highestNum){
-          highestNum = getWordLength;
-          longestWord = word;
-        } 
-      }
-      console.log(longestWord);
-      return longestWord;
+    /*
+        var words, longestWord, highestNum;
+        highestNum = 0;
+        longestWord = '';
+        function findLongestWordLength(str) {
+          //convert string to array
+          words = str.split(' ');
+          //check world length
+          for(let word of words){
+            getWordLength = word.length;
+            if (getWordLength > highestNum){
+              highestNum = getWordLength;
+              longestWord = word;
+            } 
+          }
+          console.log(longestWord);
+          return longestWord;
+        }
+    
+        findLongestWordLength("The quick brown fox jumped over the lazy dog");
+    
+    
+    // Solution N2
+    function findLongestWordLength2(str) {
+      return Math.max(...str.split(" ").map(word => word.length));
     }
+    
+    findLongestWordLength2("The quick brown fox jumped over the lazy dog");
+    */
 
-    findLongestWordLength("The quick brown fox jumped over the lazy dog");
+    // A S Y N C H R O N O U S  J A V A S C R I P T
+
+    // const second = () => {
+    //   setTimeout (() => {
+    //     console.log('Async is there');
+    //   }, 2000); // appears in 2 secondsk
+    // }
+    // const first = () => {
+    //   console.log('Hey there');
+    //   second();
+    //   console.log('The End');
+    // }
+    // first();
 
 
-// Solution N2
-function findLongestWordLength2(str) {
-  return Math.max(...str.split(" ").map(word => word.length));
-}
+    // function getRecipe() {
+    //   setTimeout(() => {
+    //     const recipeID = [523, 765, 220, 567];
+    //     console.log(recipeID);
 
-findLongestWordLength2("The quick brown fox jumped over the lazy dog");
+    //     setTimeout(id => {
+    //       const recipe = { title: 'Fresh tomato pasta', publisher: 'Jonas' };
+    //       console.log(`${id}: ${recipe.title}`);
+
+    //       setTimeout(publisher => {
+    //         const recipe2 = { title: 'Italian Pizza', publisher: 'Jonas' }
+    //         console.log(recipe2);
+    //       }, 1500, recipe.publisher);
+
+    //     }, 1000, recipeID[2]);
+
+    //   }, 1500);
+    // }
+    // getRecipe();
+
+// P R O M i S e *********************************
+ 
 
 
 
