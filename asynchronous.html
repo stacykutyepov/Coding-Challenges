@@ -105,31 +105,47 @@
 
     findLongestWordLength2("The quick brown fox jumped over the lazy dog");
     */
-    //Basic Algorithm Scripting: 
-    
+
+
+    //Basic Algorithm Scripting: ***********************************************
+
     // Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
     // get the largest num in array, // store it in a new arra
 
-    function largestOfFour(arr) {
-      var largestArr = [];
-      var largest = 0;
-      for (let num of arr) {
-        //console.log(num);
-        for (let i in num) {
-          //console.log(i);
-          if (num[i] > largest || largest === null) {
-            largest = num[i]
-            //console.log('largest' + largest);
-          }
-        }
-        largestArr.push(largest);
-        largest = 0;
-      }
-      console.log(largestArr);
-      return largestArr;
+    // function largestOfFour(arr) {
+    //   var largestArr = [];
+    //   var largest = 0;
+    //   for (let num of arr) {
+    //     //console.log(num);
+    //     for (let i in num) {
+    //       //console.log(i);
+    //       if (num[i] > largest || largest === null) {
+    //         largest = num[i]
+    //         //console.log('largest' + largest);
+    //       }
+    //     }
+    //     largestArr.push(largest);
+    //     largest = 0;
+    //   }
+    //   console.log(largestArr);
+    //   return largestArr;
+    // }
+
+    // largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]) //should return [27, 5, 39, 1001].
+
+
+    // Match last character **************************
+
+    //     Basic Algorithm Scripting: Confirm the Ending 
+    // Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+    // This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+
+    function confirmEnding(str, target) {
+      return (new RegExp(`${target}$`)).test(str);
     }
 
-    largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]) //should return [27, 5, 39, 1001].
+    console.log(confirmEnding("Bastian", "ian"));
 
 
 
