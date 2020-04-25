@@ -141,11 +141,27 @@
 
     // This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
 
-    function confirmEnding(str, target) {
-      return (new RegExp(`${target}$`)).test(str);
+    // function confirmEnding(str, target) {
+    //   return (new RegExp(`${target}$`)).test(str);
+    // }
+
+    // console.log(confirmEnding("Bastian", "ian"));
+
+
+    /**********************/
+    //Repeat a String Repeat a String***************
+
+    function repeatStringNumTimes(str, num) {
+      var repeat = '';
+      while (0 < num) {
+        repeat += str;
+        num -- ;
+      }
+      console.log(repeat)
+      return repeat;
     }
 
-    console.log(confirmEnding("Bastian", "ian"));
+    repeatStringNumTimes("*", 3) //should return "***".
 
 
 
