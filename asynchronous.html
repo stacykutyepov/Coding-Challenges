@@ -151,17 +151,17 @@
     /**********************/
     //Repeat a String Repeat a String***************
 
-    function repeatStringNumTimes(str, num) {
-      var repeat = '';
-      while (0 < num) {
-        repeat += str;
-        num -- ;
-      }
-      console.log(repeat)
-      return repeat;
-    }
+    // function repeatStringNumTimes(str, num) {
+    //   var repeat = '';
+    //   while (0 < num) {
+    //     repeat += str;
+    //     num -- ;
+    //   }
+    //   console.log(repeat)
+    //   return repeat;
+    // }
 
-    repeatStringNumTimes("*", 3) //should return "***".
+    // repeatStringNumTimes("*", 3) //should return "***".
 
 
 
@@ -243,13 +243,20 @@
     //   });
 
 
-    // ASYNC AWAIT
+    // ASYNC AWAIT - it allows us consume promises but without Callback Hell
+    // Async function always automatically return a promise
 
 
     // async function getRecipesAW() {
     //   const IDs = await getIDs;
+    //   console.log(IDs);
+    //   const recipe = await getRecipe(IDs[2]);
+    //   console.log(recipe);
+    //   const related = await getRelated('Jonas Tomson');
+    //   console.log(related);
+    //   return recipe;
     // }
-    // getRecipesAW();
+    // getRecipesAW().then(result => console.log(`${result} is the best ever!`))
 
   </script>
 </body>
