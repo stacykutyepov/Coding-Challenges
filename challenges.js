@@ -231,7 +231,7 @@ function maxOFThree(n0, n1, n2) {
 
   //********PALLINDROMS */
   // 1. SOLVE USING STACK
-
+/*
 
   function palindrome(word) {
     word = word.toLowerCase();
