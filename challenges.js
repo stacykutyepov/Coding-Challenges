@@ -1,4 +1,4 @@
-/*KATA
+/*KATA Challenge
 
 var orderNum = [];
 var text = "is2 Thi1s T4est 3a";
@@ -62,7 +62,7 @@ function countdown(n){
   }
   console.log(countdown(6));
  
-// recursion
+// recursion ****************************************************
 
   function rangeOfNumbers(startNum, endNum) {
       
@@ -144,7 +144,7 @@ function editInPlace() {
         s[i] = f[i];
     }
 }
-
+ // Reverse ARRAY ********************************************
 
 function reverseArray(arr) {
     let i = 0;
@@ -175,7 +175,9 @@ function defaultGreet(firstName, lastName){
   }
   
   defaultGreet('Stacy')
-////
+
+//// Mnemonic *****************************************
+
   function taxCalculator(num , state){
     if (state == 'NY'){
       return num + (num * 0.04);
@@ -204,7 +206,8 @@ function myMnemonic(str0, str1, str2, str3) {
 console.log(myMnemonic('Must', 'Accept', 'Sugar', 'Happiness'));
 myMnemonic('Must', 'Accept', 'Sugar', 'Happiness');
 
-//
+//*******+Check Last Character******************************************
+
 function lastCharacter(str0, str1){
     const str0Last = str0.charAt(str0.length - 1);
     const str1Last = str1.charAt(str1.length - 1);
@@ -229,8 +232,9 @@ function maxOFThree(n0, n1, n2) {
   console.log(x); 
   */
 
-  //********PALLINDROMS */
-  // 1. SOLVE USING STACK
+  //******** Looking for PALLINDROMS *****************************
+
+  // SOLVE USING STACK
 /*
 
   function palindrome(word) {
@@ -257,7 +261,7 @@ function maxOFThree(n0, n1, n2) {
 var x = palindrome("A man, a plan, a canal. Panama");
 console.log(x);
 
-// second method
+// Second method **************************************************
 
 function isPalindrome(word) {
   let i = 0;
