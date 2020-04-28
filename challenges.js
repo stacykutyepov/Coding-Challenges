@@ -1,4 +1,4 @@
-/*KATA Challenge
+/**** KATA Challenge *********************************
 
 var orderNum = [];
 var text = "is2 Thi1s T4est 3a";
@@ -62,7 +62,7 @@ function countdown(n){
   }
   console.log(countdown(6));
  
-// recursion ****************************************************
+// ********* Recursion ****************************************************
 
   function rangeOfNumbers(startNum, endNum) {
       
@@ -129,8 +129,9 @@ editInPlace(s);
 console.log(f);
 
 
-const s = [5, 7, 2];
+
 function editInPlace() {
+  const s = [5, 7, 2];
   'use strict';
   // Only change code below this line
 
@@ -206,7 +207,7 @@ function myMnemonic(str0, str1, str2, str3) {
 console.log(myMnemonic('Must', 'Accept', 'Sugar', 'Happiness'));
 myMnemonic('Must', 'Accept', 'Sugar', 'Happiness');
 
-//*******+Check Last Character******************************************
+//*******+ Check Last Character ******************************************
 
 function lastCharacter(str0, str1){
     const str0Last = str0.charAt(str0.length - 1);
