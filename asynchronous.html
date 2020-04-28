@@ -148,28 +148,48 @@
     // console.log(confirmEnding("Bastian", "ian"));
 
 
-    //Basic Algorithm Scripting: Truncate a String *****************************+
-    // Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
-    function truncateString(str, num) {
-      let newString = '';
-      for (let letter in str) {
-        //console.log(letter + ' ' + str[letter]);
-        if (str.length <= num) {
-          console.log(str);
-          return str;
-        } else if (letter < num) {
-          newString += str[letter];
-        }
+    // //Basic Algorithm Scripting: Truncate a String *****************************+
+    // // Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+    // function truncateString(str, num) {
+    //   let newString = '';
+    //   for (let letter in str) {
+    //     //console.log(letter + ' ' + str[letter]);
+    //     if (str.length <= num) {
+    //       console.log(str);
+    //       return str;
+    //     } else if (letter < num) {
+    //       newString += str[letter];
+    //     }
+    //   }
+    //   console.log(`${newString}...`);
+    //   return newString + '...';
+    // }
+
+    // truncateString("A-", 1)
+    // truncateString("A-tisket a-tasket A green and yellow basket", 8) //should return "A-tisket...".
+    // truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) //should return "A-tisket a-tasket A green and yellow basket".
+
+    //     Basic Algorithm Scripting: Title Case a Sentence
+    // Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+    // For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+
+    function titleCase(str) {
+      let newString = [];
+      let words = [];
+      //convert string to array
+      words = str.split(' '); // ["I'm", "a", "little", "tea", "pot"]
+
+      for (let i = 0; i < words.length; i++) {
+        newString.push(words[i].charAt(0).toUpperCase() + words[i].slice(1, words[i].length).toLowerCase());
       }
-      console.log(`${newString}...`);
-      return newString + '...';
+      console.log(newString.join(' '));
+      return newString.join(' ');
     }
 
-    truncateString("A-", 1)
-    truncateString("A-tisket a-tasket A green and yellow basket", 8) //should return "A-tisket...".
-    truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) //should return "A-tisket a-tasket A green and yellow basket".
-
-
+    titleCase("I'm a little tea pot");
+    titleCase("sHoRt AnD sToUt") //should return Short And Stout.
+    titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") //should return Here Is My Handle Here Is My Spout.
 
 
     /**********************/
