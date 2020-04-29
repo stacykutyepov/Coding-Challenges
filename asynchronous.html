@@ -303,6 +303,10 @@
     // getRecipesAW().then(result => console.log(`${result} is the best ever!`))
 
 
+
+
+
+
     // A J A X  &  A P I ********************************+*
     // Cross origin resourse -> > CORS
 
@@ -345,6 +349,9 @@
 
 
 
+
+
+
     // ****** Slice and Splice *******************
     // frankenSplice([1, 2, 3], [4, 5], 1) should return [4, 1, 2, 3, 5].
     // the original array should't be changed
@@ -358,25 +365,63 @@
     // frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 
+
+
+
+
+
     // Basic Algorithm Scripting: Falsy Bouncer ***********
     // Remove all falsy values from an array. *********
     // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
     // Hint: Try converting each value to a Boolean.
 
-    function bouncer(arr) {
-      // loop through array
-      let newArr = [];
-      for (let i in arr) {
-        if (arr[i]) {
-          newArr.push(arr[i]);
-        }
-      };
-      console.log(newArr);
-      return newArr;
-    };
+    // function bouncer(arr) {
+    //   // loop through array
+    //   let newArr = [];
+    //   for (let i in arr) {
+    //     if (arr[i]) {
+    //       newArr.push(arr[i]);
+    //     }
+    //   };
+    //   console.log(newArr);
+    //   return newArr;
+    // };
 
-    bouncer([false, null, 0, NaN, undefined, ""]) //should return [].
-    bouncer([7, "ate", "", false, 9])//should return [7, "ate", 9].
+    // bouncer([false, null, 0, NaN, undefined, ""]) //should return [].
+    // bouncer([7, "ate", "", false, 9])//should return [7, "ate", 9].
+
+
+
+
+
+    // ******Basic Algorithm Scripting: Where do I Belong *****
+    function getIndexToIns(arr, num) {
+      // loop throgh array, compare number, put on the lowest position, return position
+      //let newArr = [];
+      for (let i in arr) {
+        var position = 0;
+        if (num > arr[arr.length - 1]) {
+          //arr.splice(arr.length, 0, num); //insert
+          position = arr.length;
+          break;
+        } else if (num <= arr[i]) {
+          //arr.splice(i, 0, num); //insert
+          position = i;
+          break;
+
+        }
+      }
+      console.log(position);
+      return position;
+    }
+
+    getIndexToIns([10, 20, 30, 40, 50], 30) //should return 2.
+    getIndexToIns([10, 20, 30, 40, 50], 35) //should return 3.
+    getIndexToIns([2, 5, 10], 15) //should return 3.
+
+
+
+
 
 
   </script>
