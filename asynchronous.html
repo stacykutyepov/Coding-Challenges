@@ -358,10 +358,26 @@
     // frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 
-// Basic Algorithm Scripting: Falsy Bouncer ***********
-// Remove all falsy values from an array. *********
-// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
-// Hint: Try converting each value to a Boolean.
+    // Basic Algorithm Scripting: Falsy Bouncer ***********
+    // Remove all falsy values from an array. *********
+    // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+    // Hint: Try converting each value to a Boolean.
+
+    function bouncer(arr) {
+      // loop through array
+      let newArr = [];
+      for (let i in arr) {
+        if (arr[i]) {
+          newArr.push(arr[i]);
+        }
+      };
+      console.log(newArr);
+      return newArr;
+    };
+
+    bouncer([false, null, 0, NaN, undefined, ""]) //should return [].
+    bouncer([7, "ate", "", false, 9])//should return [7, "ate", 9].
+
 
   </script>
 </body>
