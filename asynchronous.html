@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Asynchronous JavaScript</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Asynchronous JavaScript</title>
-</head>
+  <body>
+    <h1>Asynchronous JavaScript</h1>
+    <script>
+      //new challenge*
 
-<body>
-  <h1>Asynchronous JavaScript</h1>
-  <script>
+      // Take a look at the object we've provided in the code editor. The user object contains three keys. The data key contains five keys, one of which contains an array of friends. From this, you can see how flexible objects are as data structures. We've started writing a function addFriend. Finish writing it so that it takes a user object and adds the name of the friend argument to the array stored in user.data.friends and returns that array.
 
-    //new challenge*
+      // let user = {
+      //   name: 'Kenneth',
+      //   age: 28,
+      //   data: {
+      //     username: 'kennethCodesAllDay',
+      //     joinDate: 'March 26, 2016',
+      //     organization: 'freeCodeCamp',
+      //     friends: [
+      //       'Sam',
+      //       'Kira',
+      //       'Tomo'
+      //     ],
+      //     location: {
+      //       city: 'San Francisco',
+      //       state: 'CA',
+      //       country: 'USA'
+      //     }
+      //   }
+      // };
 
-    // Take a look at the object we've provided in the code editor. The user object contains three keys. The data key contains five keys, one of which contains an array of friends. From this, you can see how flexible objects are as data structures. We've started writing a function addFriend. Finish writing it so that it takes a user object and adds the name of the friend argument to the array stored in user.data.friends and returns that array.
+      // function addFriend(userObj, friend) {
+      //   // Only change code below this line
+      //   userObj.data.friends.push(friend);
+      //   return userObj.data.friends;
 
-    // let user = {
-    //   name: 'Kenneth',
-    //   age: 28,
-    //   data: {
-    //     username: 'kennethCodesAllDay',
-    //     joinDate: 'March 26, 2016',
-    //     organization: 'freeCodeCamp',
-    //     friends: [
-    //       'Sam',
-    //       'Kira',
-    //       'Tomo'
-    //     ],
-    //     location: {
-    //       city: 'San Francisco',
-    //       state: 'CA',
-    //       country: 'USA'
-    //     }
-    //   }
-    // };
+      //   // Only change code above this line
+      // }
+      // console.log(addFriend(user, 'Pete'));
 
-    // function addFriend(userObj, friend) {
-    //   // Only change code below this line
-    //   userObj.data.friends.push(friend);
-    //   return userObj.data.friends;
-
-    //   // Only change code above this line
-    // }
-    // console.log(addFriend(user, 'Pete'));
-
-    /*
+      /*
         //reverse a string
         var newString = '';
         function reverseString(str) {
@@ -57,7 +55,7 @@
         }
     */
 
-    /*
+      /*
     var number = 1;
     var i = 1;
     function factorialize(num) {
@@ -73,10 +71,10 @@
     factorialize(0);
     */
 
-    // Find the Longest Word in a String*************
+      // Find the Longest Word in a String*************
 
-    // convert string to array, check world lenght, save the length in a variable, compare and return the longest world
-    /*
+      // convert string to array, check world lenght, save the length in a variable, compare and return the longest world
+      /*
         var words, longestWord, highestNum;
         highestNum = 0;
         longestWord = '';
@@ -106,325 +104,331 @@
     findLongestWordLength2("The quick brown fox jumped over the lazy dog");
     */
 
-
-    //Basic Algorithm Scripting: ***********************************************
-
-    // Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
-    // get the largest num in array, // store it in a new arra
-
-    // function largestOfFour(arr) {
-    //   var largestArr = [];
-    //   var largest = 0;
-    //   for (let num of arr) {
-    //     //console.log(num);
-    //     for (let i in num) {
-    //       //console.log(i);
-    //       if (num[i] > largest || largest === null) {
-    //         largest = num[i]
-    //         //console.log('largest' + largest);
-    //       }
-    //     }
-    //     largestArr.push(largest);
-    //     largest = 0;
-    //   }
-    //   console.log(largestArr);
-    //   return largestArr;
-    // }
-
-    // largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]) //should return [27, 5, 39, 1001].
-
-
-    // Match last character **************************
-
-    //     Basic Algorithm Scripting: Confirm the Ending 
-    // Check if a string (first argument, str) ends with the given target string (second argument, target).
-
-    // This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
-
-    // function confirmEnding(str, target) {
-    //   return (new RegExp(`${target}$`)).test(str);
-    // }
-
-    // console.log(confirmEnding("Bastian", "ian"));
-
-
-    // //Basic Algorithm Scripting: Truncate a String *****************************+
-    // // Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
-    // function truncateString(str, num) {
-    //   let newString = '';
-    //   for (let letter in str) {
-    //     //console.log(letter + ' ' + str[letter]);
-    //     if (str.length <= num) {
-    //       console.log(str);
-    //       return str;
-    //     } else if (letter < num) {
-    //       newString += str[letter];
-    //     }
-    //   }
-    //   console.log(`${newString}...`);
-    //   return newString + '...';
-    // }
-
-    // truncateString("A-", 1)
-    // truncateString("A-tisket a-tasket A green and yellow basket", 8) //should return "A-tisket...".
-    // truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) //should return "A-tisket a-tasket A green and yellow basket".
-
-    //     Basic Algorithm Scripting: Title Case a Sentence
-    // Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
-
-    // For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
-
-    // function titleCase(str) {
-    //   let newString = [];
-    //   let words = [];
-    //   //convert string to array
-    //   words = str.split(' '); // ["I'm", "a", "little", "tea", "pot"]
-
-    //   for (let i = 0; i < words.length; i++) {
-    //     newString.push(words[i].charAt(0).toUpperCase() + words[i].slice(1, words[i].length).toLowerCase());
-    //   }
-    //   console.log(newString.join(' '));
-    //   return newString.join(' ');
-    // }
-
-    // titleCase("I'm a little tea pot");
-    // titleCase("sHoRt AnD sToUt") //should return Short And Stout.
-    // titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") //should return Here Is My Handle Here Is My Spout.
-
-
-    /**********************/
-    //Repeat a String Repeat a String***************
-
-    // function repeatStringNumTimes(str, num) {
-    //   var repeat = '';
-    //   while (0 < num) {
-    //     repeat += str;
-    //     num -- ;
-    //   }
-    //   console.log(repeat)
-    //   return repeat;
-    // }
-
-    // repeatStringNumTimes("*", 3) //should return "***".
-
-
-
-    // A S Y N C H R O N O U S  J A V A S C R I P T
-
-    // const second = () => {
-    //   setTimeout (() => {
-    //     console.log('Async is there');
-    //   }, 2000); // appears in 2 secondsk
-    // }
-    // const first = () => {
-    //   console.log('Hey there');
-    //   second();
-    //   console.log('The End');
-    // }
-    // first();
-
-
-    // function getRecipe() {
-    //   setTimeout(() => {
-    //     const recipeID = [523, 765, 220, 567];
-    //     console.log(recipeID);
-
-    //     setTimeout(id => {
-    //       const recipe = { title: 'Fresh tomato pasta', publisher: 'Jonas' };
-    //       console.log(`${id}: ${recipe.title}`);
-
-    //       setTimeout(publisher => {
-    //         const recipe2 = { title: 'Italian Pizza', publisher: 'Jonas' }
-    //         console.log(recipe2);
-    //       }, 1500, recipe.publisher);
-
-    //     }, 1000, recipeID[2]);
-
-    //   }, 1500);
-    // }
-    // getRecipe();
-
-    // // P R O M i S e *********************************
-    // const getIDs = new Promise((resolve, reject) => {
-    //   setTimeout(() => {
-    //     resolve([523, 456, 768, 220]);
-    //   }, 1500);
-    // });
-
-    // const getRecipe = recID => {
-    //   return new Promise((resolve, reject) => {
-    //     setTimeout(ID => {
-    //       const recipe = { title: 'Fresh tomato pasta', publisher: 'Jonas' };
-    //       resolve(`${ID}: ${recipe.title}`)
-    //     }, 1500, recID)
-    //   });
-    // };
-
-    // const getRelated = publisher => {
-    //   return new Promise((resolve, reject) => {
-    //     setTimeout(pub => {
-    //       const recipe = { title: 'Italian Pizza', publisher: 'Jonas' };
-    //       resolve(`${pub}: ${recipe.title}`);
-    //     }, 1500, publisher);
-    //   });
-    // };
-
-
-    // getIDs
-    //   .then(IDs => {
-    //     console.log(IDs);
-    //     return getRecipe(IDs[2]);
-    //   })
-    //   .then(recipe => {
-    //     console.log(recipe);
-    //     return getRelated('Jonas Tomson');
-    //   })
-    //   .then(recipe => {
-    //     console.log(recipe);
-    //   })
-    //   .catch(error => {
-    //     console.log('Error');
-    //   });
-
-
-    // ASYNC AWAIT - it allows us consume promises but without Callback Hell
-    // Async function always automatically return a promise
-
-
-    // async function getRecipesAW() {
-    //   const IDs = await getIDs;
-    //   console.log(IDs);
-    //   const recipe = await getRecipe(IDs[2]);
-    //   console.log(recipe);
-    //   const related = await getRelated('Jonas Tomson');
-    //   console.log(related);
-    //   return recipe;
-    // }
-    // getRecipesAW().then(result => console.log(`${result} is the best ever!`))
-
-
-
-
-
-
-    // A J A X  &  A P I ********************************+*
-    // Cross origin resourse -> > CORS
-
-    // function getWeather(woeid) {
-    //   fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)
-    //     .then(result => {
-    //       //console.log(result);
-    //       return result.json();
-    //     })
-    //     .then(data => {
-    //       // console.log(data);
-    //       const today = data.consolidated_weather[0];
-    //       console.log(`Temperature today in ${data.title} stay between ${today.min_temp} C and ${today.max_temp} C.`);
-    //     })
-    //     .catch(error => console.log(error));
-    // }
-    // getWeather(2487956);
-    // getWeather(44418);
-
-
-    // // ASYNC AWAIT ******************
-    // // always returns a promise
-
-    // async function getWeatherAW(woeid) {
-    //   try {
-
-    //     const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`);
-    //     const data = await result.json();
-    //     const tomorrow = data.consolidated_weather[1];
-    //     console.log(`Temperature tomorrow in ${data.title} stay between ${tomorrow.min_temp.toFixed(0)} C and ${tomorrow.max_temp.toFixed(0)} C.`);
-
-    //   } catch(error) {
-    //     console.log(error);
-    //   }
-    // }
-    // getWeatherAW(2487956);
-    // getWeatherAW(44418);
-    // let dataLondon =  getWeatherAW(44418);
-    // console.log(dataLondon);
-
-
-
-
-
-
-    // ****** Slice and Splice *******************
-    // frankenSplice([1, 2, 3], [4, 5], 1) should return [4, 1, 2, 3, 5].
-    // the original array should't be changed
-
-    // function frankenSplice(arr1, arr2, n) {
-    //   var newArr = arr2.slice();
-    //   // put
-    //   newArr.splice(n, 0, ...arr1);
-    //   return newArr;
-    // }
-    // frankenSplice([1, 2, 3], [4, 5, 6], 1);
-
-
-
-
-
-
-
-    // Basic Algorithm Scripting: Falsy Bouncer ***********
-    // Remove all falsy values from an array. *********
-    // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
-    // Hint: Try converting each value to a Boolean.
-
-    // function bouncer(arr) {
-    //   // loop through array
-    //   let newArr = [];
-    //   for (let i in arr) {
-    //     if (arr[i]) {
-    //       newArr.push(arr[i]);
-    //     }
-    //   };
-    //   console.log(newArr);
-    //   return newArr;
-    // };
-
-    // bouncer([false, null, 0, NaN, undefined, ""]) //should return [].
-    // bouncer([7, "ate", "", false, 9])//should return [7, "ate", 9].
-
-
-
-
-
-    // ******Basic Algorithm Scripting: Where do I Belong *****
-    function getIndexToIns(arr, num) {
-      // loop throgh array, compare number, put on the lowest position, return position
-      //let newArr = [];
-      for (let i in arr) {
-        var position = 0;
-        if (num > arr[arr.length - 1]) {
-          //arr.splice(arr.length, 0, num); //insert
-          position = arr.length;
-          break;
-        } else if (num <= arr[i]) {
-          //arr.splice(i, 0, num); //insert
-          position = i;
-          break;
-
+      //Basic Algorithm Scripting: ***********************************************
+
+      // Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+      // get the largest num in array, // store it in a new arra
+
+      // function largestOfFour(arr) {
+      //   var largestArr = [];
+      //   var largest = 0;
+      //   for (let num of arr) {
+      //     //console.log(num);
+      //     for (let i in num) {
+      //       //console.log(i);
+      //       if (num[i] > largest || largest === null) {
+      //         largest = num[i]
+      //         //console.log('largest' + largest);
+      //       }
+      //     }
+      //     largestArr.push(largest);
+      //     largest = 0;
+      //   }
+      //   console.log(largestArr);
+      //   return largestArr;
+      // }
+
+      // largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]) //should return [27, 5, 39, 1001].
+
+      // Match last character **************************
+
+      //     Basic Algorithm Scripting: Confirm the Ending
+      // Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+      // This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+
+      // function confirmEnding(str, target) {
+      //   return (new RegExp(`${target}$`)).test(str);
+      // }
+
+      // console.log(confirmEnding("Bastian", "ian"));
+
+      // //Basic Algorithm Scripting: Truncate a String *****************************+
+      // // Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+      // function truncateString(str, num) {
+      //   let newString = '';
+      //   for (let letter in str) {
+      //     //console.log(letter + ' ' + str[letter]);
+      //     if (str.length <= num) {
+      //       console.log(str);
+      //       return str;
+      //     } else if (letter < num) {
+      //       newString += str[letter];
+      //     }
+      //   }
+      //   console.log(`${newString}...`);
+      //   return newString + '...';
+      // }
+
+      // truncateString("A-", 1)
+      // truncateString("A-tisket a-tasket A green and yellow basket", 8) //should return "A-tisket...".
+      // truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) //should return "A-tisket a-tasket A green and yellow basket".
+
+      //     Basic Algorithm Scripting: Finders Keepers
+      // Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
+
+      function findElement(arr, func) {
+        for (let i of arr) {
+          //console.log(i);
+          if (func(i) === true) {
+            console.log(i);
+            return i;
+          }
         }
+        return undefined;
       }
-      console.log(position);
-      return position;
-    }
 
-    getIndexToIns([10, 20, 30, 40, 50], 30) //should return 2.
-    getIndexToIns([10, 20, 30, 40, 50], 35) //should return 3.
-    getIndexToIns([2, 5, 10], 15) //should return 3.
+      findElement([1, 3, 5, 8, 9, 10], function (num) {
+        return num % 2 === 0;
+      }); //should return 8.
+      findElement([1, 3, 5, 9], function (num) {
+        return num % 2 === 0;
+      }); //should return undefined.
 
+      //     Basic Algorithm Scripting: Title Case a Sentence
+      // Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
 
+      // For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
 
+      // function titleCase(str) {
+      //   let newString = [];
+      //   let words = [];
+      //   //convert string to array
+      //   words = str.split(' '); // ["I'm", "a", "little", "tea", "pot"]
 
+      //   for (let i = 0; i < words.length; i++) {
+      //     newString.push(words[i].charAt(0).toUpperCase() + words[i].slice(1, words[i].length).toLowerCase());
+      //   }
+      //   console.log(newString.join(' '));
+      //   return newString.join(' ');
+      // }
 
+      // titleCase("I'm a little tea pot");
+      // titleCase("sHoRt AnD sToUt") //should return Short And Stout.
+      // titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") //should return Here Is My Handle Here Is My Spout.
 
-  </script>
-</body>
+      /**********************/
+      //Repeat a String Repeat a String***************
 
+      // function repeatStringNumTimes(str, num) {
+      //   var repeat = '';
+      //   while (0 < num) {
+      //     repeat += str;
+      //     num -- ;
+      //   }
+      //   console.log(repeat)
+      //   return repeat;
+      // }
+
+      // repeatStringNumTimes("*", 3) //should return "***".
+
+      // A S Y N C H R O N O U S  J A V A S C R I P T
+
+      // const second = () => {
+      //   setTimeout (() => {
+      //     console.log('Async is there');
+      //   }, 2000); // appears in 2 secondsk
+      // }
+      // const first = () => {
+      //   console.log('Hey there');
+      //   second();
+      //   console.log('The End');
+      // }
+      // first();
+
+      // function getRecipe() {
+      //   setTimeout(() => {
+      //     const recipeID = [523, 765, 220, 567];
+      //     console.log(recipeID);
+
+      //     setTimeout(id => {
+      //       const recipe = { title: 'Fresh tomato pasta', publisher: 'Jonas' };
+      //       console.log(`${id}: ${recipe.title}`);
+
+      //       setTimeout(publisher => {
+      //         const recipe2 = { title: 'Italian Pizza', publisher: 'Jonas' }
+      //         console.log(recipe2);
+      //       }, 1500, recipe.publisher);
+
+      //     }, 1000, recipeID[2]);
+
+      //   }, 1500);
+      // }
+      // getRecipe();
+
+      // // P R O M i S e *********************************
+      // const getIDs = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve([523, 456, 768, 220]);
+      //   }, 1500);
+      // });
+
+      // const getRecipe = recID => {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(ID => {
+      //       const recipe = { title: 'Fresh tomato pasta', publisher: 'Jonas' };
+      //       resolve(`${ID}: ${recipe.title}`)
+      //     }, 1500, recID)
+      //   });
+      // };
+
+      // const getRelated = publisher => {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(pub => {
+      //       const recipe = { title: 'Italian Pizza', publisher: 'Jonas' };
+      //       resolve(`${pub}: ${recipe.title}`);
+      //     }, 1500, publisher);
+      //   });
+      // };
+
+      // getIDs
+      //   .then(IDs => {
+      //     console.log(IDs);
+      //     return getRecipe(IDs[2]);
+      //   })
+      //   .then(recipe => {
+      //     console.log(recipe);
+      //     return getRelated('Jonas Tomson');
+      //   })
+      //   .then(recipe => {
+      //     console.log(recipe);
+      //   })
+      //   .catch(error => {
+      //     console.log('Error');
+      //   });
+
+      // ASYNC AWAIT - it allows us consume promises but without Callback Hell
+      // Async function always automatically return a promise
+
+      // async function getRecipesAW() {
+      //   const IDs = await getIDs;
+      //   console.log(IDs);
+      //   const recipe = await getRecipe(IDs[2]);
+      //   console.log(recipe);
+      //   const related = await getRelated('Jonas Tomson');
+      //   console.log(related);
+      //   return recipe;
+      // }
+      // getRecipesAW().then(result => console.log(`${result} is the best ever!`))
+
+      // A J A X  &  A P I ********************************+*
+      // Cross origin resourse -> > CORS
+
+      // function getWeather(woeid) {
+      //   fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)
+      //     .then(result => {
+      //       //console.log(result);
+      //       return result.json();
+      //     })
+      //     .then(data => {
+      //       // console.log(data);
+      //       const today = data.consolidated_weather[0];
+      //       console.log(`Temperature today in ${data.title} stay between ${today.min_temp} C and ${today.max_temp} C.`);
+      //     })
+      //     .catch(error => console.log(error));
+      // }
+      // getWeather(2487956);
+      // getWeather(44418);
+
+      // ASYNC AWAIT ******************
+      // always returns a promise
+
+      // async function getWeatherAW(woeid) {
+      //   try {
+
+      //     const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`);
+      //     const data = await result.json();
+      //     const tomorrow = data.consolidated_weather[1];
+      //     console.log(`Temperature tomorrow in ${data.title} stay between ${tomorrow.min_temp.toFixed(0)} C and ${tomorrow.max_temp.toFixed(0)} C.`);
+
+      //   } catch(error) {
+      //     console.log(error);
+      //   }
+      // }
+      // getWeatherAW(2487956);
+      // getWeatherAW(44418);
+      // let dataLondon =  getWeatherAW(44418);
+      // console.log(dataLondon);
+
+      // function getDate() {
+      //   const todayTime = (new Date()).getUTCHours();
+      //   console.log(`Current UTC time is ${todayTime}`);
+      //   return todayTime;
+      // }
+
+      // ****** Slice and Splice *******************
+      // frankenSplice([1, 2, 3], [4, 5], 1) should return [4, 1, 2, 3, 5].
+      // the original array should't be changed
+
+      // function frankenSplice(arr1, arr2, n) {
+      //   var newArr = arr2.slice();
+      //   // put
+      //   newArr.splice(n, 0, ...arr1);
+      //   return newArr;
+      // }
+      // frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+      // Basic Algorithm Scripting: Falsy Bouncer ***********
+      // Remove all falsy values from an array. *********
+      // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+      // Hint: Try converting each value to a Boolean.
+
+      // function bouncer(arr) {
+      //   // loop through array
+      //   let newArr = [];
+      //   for (let i in arr) {
+      //     if (arr[i]) {
+      //       newArr.push(arr[i]);
+      //     }
+      //   };
+      //   console.log(newArr);
+      //   return newArr;
+      // };
+
+      // bouncer([false, null, 0, NaN, undefined, ""]) //should return [].
+      // bouncer([7, "ate", "", false, 9])//should return [7, "ate", 9].
+
+      // // ******Basic Algorithm Scripting: Where do I Belong *****
+      // function getIndexToIns(arr, num) {
+      //   // loop throgh array, compare number, put on the lowest position, return position
+      //   //let newArr = [];
+      //   for (let i in arr) {
+      //     var position = 0;
+      //     if (num > arr[arr.length - 1]) {
+      //       //arr.splice(arr.length, 0, num); //insert
+      //       position = arr.length;
+      //       break;
+      //     } else if (num <= arr[i]) {
+      //       //arr.splice(i, 0, num); //insert
+      //       position = i;
+      //       break;
+
+      //     }
+      //   }
+      //   console.log(position);
+      //   return position;
+      // }
+
+      // getIndexToIns([10, 20, 30, 40, 50], 30) //should return 2.
+      // getIndexToIns([10, 20, 30, 40, 50], 35) //should return 3.
+      // getIndexToIns([2, 5, 10], 15) //should return 3.
+
+      //     Basic Algorithm Scripting: Mutations
+      // Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+
+      // For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+
+      // The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+
+      // Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+
+      // function mutation(arr) {
+      // let test = (new RegExp(`${arr[0]}i`)).test(arr[1]);
+      // console.log(test);
+      // return test;
+      //  }
+
+      //  mutation(["hello", "hey"]);
+    </script>
+  </body>
 </html>
