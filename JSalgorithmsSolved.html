@@ -44,65 +44,65 @@
       // console.log(addFriend(user, 'Pete'));
 
       /*
-        //reverse a string
-        var newString = '';
-        function reverseString(str) {
-          for (let i = str.length - 1; i >= 0; i--) {
-            newString += str[i];
-          }
-          console.log(newString);
-          return newString;
-        }
-    */
+                    //reverse a string
+                    var newString = '';
+                    function reverseString(str) {
+                      for (let i = str.length - 1; i >= 0; i--) {
+                        newString += str[i];
+                      }
+                      console.log(newString);
+                      return newString;
+                    }
+                */
 
       /*
-    var number = 1;
-    var i = 1;
-    function factorialize(num) {
-      // if(num === 0){ return number = 1}
-      while (i <= num) {
-        number = number * i;
-        i++;
-      }
-      console.log(number);
-      return number;
-    }
+                var number = 1;
+                var i = 1;
+                function factorialize(num) {
+                  // if(num === 0){ return number = 1}
+                  while (i <= num) {
+                    number = number * i;
+                    i++;
+                  }
+                  console.log(number);
+                  return number;
+                }
 
-    factorialize(0);
-    */
+                factorialize(0);
+                */
 
       // Find the Longest Word in a String*************
 
       // convert string to array, check world lenght, save the length in a variable, compare and return the longest world
       /*
-        var words, longestWord, highestNum;
-        highestNum = 0;
-        longestWord = '';
-        function findLongestWordLength(str) {
-          //convert string to array
-          words = str.split(' ');
-          //check world length
-          for(let word of words){
-            getWordLength = word.length;
-            if (getWordLength > highestNum){
-              highestNum = getWordLength;
-              longestWord = word;
-            }
-          }
-          console.log(longestWord);
-          return longestWord;
-        }
+                    var words, longestWord, highestNum;
+                    highestNum = 0;
+                    longestWord = '';
+                    function findLongestWordLength(str) {
+                      //convert string to array
+                      words = str.split(' ');
+                      //check world length
+                      for(let word of words){
+                        getWordLength = word.length;
+                        if (getWordLength > highestNum){
+                          highestNum = getWordLength;
+                          longestWord = word;
+                        }
+                      }
+                      console.log(longestWord);
+                      return longestWord;
+                    }
 
-        findLongestWordLength("The quick brown fox jumped over the lazy dog");
+                    findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 
-    // Solution N2
-    function findLongestWordLength2(str) {
-      return Math.max(...str.split(" ").map(word => word.length));
-    }
+                // Solution N2
+                function findLongestWordLength2(str) {
+                  return Math.max(...str.split(" ").map(word => word.length));
+                }
 
-    findLongestWordLength2("The quick brown fox jumped over the lazy dog");
-    */
+                findLongestWordLength2("The quick brown fox jumped over the lazy dog");
+                */
 
       //Basic Algorithm Scripting: ***********************************************
 
@@ -164,28 +164,49 @@
       // truncateString("A-tisket a-tasket A green and yellow basket", 8) //should return "A-tisket...".
       // truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) //should return "A-tisket a-tasket A green and yellow basket".
 
-      //     Basic Algorithm Scripting: Finders Keepers
+      //       Basic Algorithm Scripting: Chunky Monkey ***********************************
+      // Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+
+      // function chunkArrayInGroups(arr, size) {
+      //   let newArr = [];
+      //   for (let i = 0; i < arr.length; i++) {
+      //     newArr.push(arr.splice(0, size));
+      //     i = 0;
+      //   }
+      //   if (arr.length > 0) {
+      //     newArr.push(arr);
+      //   }
+      //   console.log(newArr);
+      //   return newArr;
+      //   // console.log(arr);
+      // }
+
+      // //chunkArrayInGroups(["a", "b", "c", "d"], 2); //should return [["a", "b"], ["c", "d"]].
+      // chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4); //should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].
+      // chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2); //should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].
+
+      //     Basic Algorithm Scripting: Finders Keepers*******************************
       // Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
 
-      function findElement(arr, func) {
-        for (let i of arr) {
-          //console.log(i);
-          if (func(i) === true) {
-            console.log(i);
-            return i;
-          }
-        }
-        return undefined;
-      }
+      // function findElement(arr, func) {
+      //   for (let i of arr) {
+      //     //console.log(i);
+      //     if (func(i) === true) {
+      //       console.log(i);
+      //       return i;
+      //     }
+      //   }
+      //   return undefined;
+      // }
 
-      findElement([1, 3, 5, 8, 9, 10], function (num) {
-        return num % 2 === 0;
-      }); //should return 8.
-      findElement([1, 3, 5, 9], function (num) {
-        return num % 2 === 0;
-      }); //should return undefined.
+      // findElement([1, 3, 5, 8, 9, 10], function (num) {
+      //   return num % 2 === 0;
+      // }); //should return 8.
+      // findElement([1, 3, 5, 9], function (num) {
+      //   return num % 2 === 0;
+      // }); //should return undefined.
 
-      //     Basic Algorithm Scripting: Title Case a Sentence
+      //     Basic Algorithm Scripting: Title Case a Sentence ********************+++***
       // Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
 
       // For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
@@ -422,13 +443,21 @@
 
       // Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
 
-      // function mutation(arr) {
-      // let test = (new RegExp(`${arr[0]}i`)).test(arr[1]);
-      // console.log(test);
-      // return test;
-      //  }
+      function mutation(arr) {
+        arr[0] = arr[0].toLowerCase();
+        arr[1] = arr[1].toLowerCase();
+        for (let i of arr[1]) {
+          // i = h, e, y
+          if (arr[0].includes(i) == false) {
+            return false;
+          }
+        }
+        return true;
+      }
 
-      //  mutation(["hello", "hey"]);
+      console.log(mutation(["hello", "he"]));
+
+      
     </script>
   </body>
 </html>
