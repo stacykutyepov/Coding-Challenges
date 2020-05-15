@@ -44,65 +44,65 @@
             // console.log(addFriend(user, 'Pete'));
 
             /*
-                                 //reverse a string
-                                 var newString = '';
-                                 function reverseString(str) {
-                                   for (let i = str.length - 1; i >= 0; i--) {
-                                     newString += str[i];
-                                   }
-                                   console.log(newString);
-                                   return newString;
-                                 }
-                             */
+                                             //reverse a string
+                                             var newString = '';
+                                             function reverseString(str) {
+                                               for (let i = str.length - 1; i >= 0; i--) {
+                                                 newString += str[i];
+                                               }
+                                               console.log(newString);
+                                               return newString;
+                                             }
+                                         */
 
             /*
-                             var number = 1;
-                             var i = 1;
-                             function factorialize(num) {
-                               // if(num === 0){ return number = 1}
-                               while (i <= num) {
-                                 number = number * i;
-                                 i++;
-                               }
-                               console.log(number);
-                               return number;
-                             }
+                                         var number = 1;
+                                         var i = 1;
+                                         function factorialize(num) {
+                                           // if(num === 0){ return number = 1}
+                                           while (i <= num) {
+                                             number = number * i;
+                                             i++;
+                                           }
+                                           console.log(number);
+                                           return number;
+                                         }
 
-                             factorialize(0);
-                             */
+                                         factorialize(0);
+                                         */
 
             // Find the Longest Word in a String*************
 
             // convert string to array, check world lenght, save the length in a variable, compare and return the longest world
             /*
-                                 var words, longestWord, highestNum;
-                                 highestNum = 0;
-                                 longestWord = '';
-                                 function findLongestWordLength(str) {
-                                   //convert string to array
-                                   words = str.split(' ');
-                                   //check world length
-                                   for(let word of words){
-                                     getWordLength = word.length;
-                                     if (getWordLength > highestNum){
-                                       highestNum = getWordLength;
-                                       longestWord = word;
-                                     }
-                                   }
-                                   console.log(longestWord);
-                                   return longestWord;
-                                 }
+                                             var words, longestWord, highestNum;
+                                             highestNum = 0;
+                                             longestWord = '';
+                                             function findLongestWordLength(str) {
+                                               //convert string to array
+                                               words = str.split(' ');
+                                               //check world length
+                                               for(let word of words){
+                                                 getWordLength = word.length;
+                                                 if (getWordLength > highestNum){
+                                                   highestNum = getWordLength;
+                                                   longestWord = word;
+                                                 }
+                                               }
+                                               console.log(longestWord);
+                                               return longestWord;
+                                             }
 
-                                 findLongestWordLength("The quick brown fox jumped over the lazy dog");
+                                             findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 
-                             // Solution N2
-                             function findLongestWordLength2(str) {
-                               return Math.max(...str.split(" ").map(word => word.length));
-                             }
+                                         // Solution N2
+                                         function findLongestWordLength2(str) {
+                                           return Math.max(...str.split(" ").map(word => word.length));
+                                         }
 
-                             findLongestWordLength2("The quick brown fox jumped over the lazy dog");
-                             */
+                                         findLongestWordLength2("The quick brown fox jumped over the lazy dog");
+                                         */
 
             //Basic Algorithm Scripting: ***********************************************
 
@@ -547,19 +547,34 @@
             // Note
             // You can return the array with its elements in any order.
 
-            function diffArray(arr1, arr2) {
-                let newArr = arr1
-                    .concat(arr2)
-                    .filter(
-                        (item) => !arr1.includes(item) || !arr2.includes(item)
-                    );
-                console.log(newArr);
-            }
+            // function diffArray(arr1, arr2) {
+            //     let newArr = arr1
+            //         .concat(arr2)
+            //         .filter(
+            //             (item) => !arr1.includes(item) || !arr2.includes(item)
+            //         );
+            //     console.log(newArr);
+            // }
 
-            diffArray(
-                ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
-                ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-            ); //should return ["diorite", "pink wool"].
+            // diffArray(
+            //     ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
+            //     ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+            // ); //should return ["diorite", "pink wool"].
+
+            //             Intermediate Algorithm Scripting: Seek and Destroy ***************************
+            // You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+
+            // Note
+            // You have to use the arguments object.
+            function destroyer(arr, ...num) {
+                let newArr = [...num];
+                for (let i of newArr) {
+                  arr = arr.filter((num) => num != i)
+                }
+                return arr;
+            }
+            // destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+            console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5)); //should return [1].
         </script>
     </body>
 </html>
