@@ -44,65 +44,65 @@
             // console.log(addFriend(user, 'Pete'));
 
             /*
-                    //reverse a string
-                    var newString = '';
-                    function reverseString(str) {
-                      for (let i = str.length - 1; i >= 0; i--) {
-                        newString += str[i];
-                      }
-                      console.log(newString);
-                      return newString;
-                    }
-                */
+                                 //reverse a string
+                                 var newString = '';
+                                 function reverseString(str) {
+                                   for (let i = str.length - 1; i >= 0; i--) {
+                                     newString += str[i];
+                                   }
+                                   console.log(newString);
+                                   return newString;
+                                 }
+                             */
 
             /*
-                var number = 1;
-                var i = 1;
-                function factorialize(num) {
-                  // if(num === 0){ return number = 1}
-                  while (i <= num) {
-                    number = number * i;
-                    i++;
-                  }
-                  console.log(number);
-                  return number;
-                }
+                             var number = 1;
+                             var i = 1;
+                             function factorialize(num) {
+                               // if(num === 0){ return number = 1}
+                               while (i <= num) {
+                                 number = number * i;
+                                 i++;
+                               }
+                               console.log(number);
+                               return number;
+                             }
 
-                factorialize(0);
-                */
+                             factorialize(0);
+                             */
 
             // Find the Longest Word in a String*************
 
             // convert string to array, check world lenght, save the length in a variable, compare and return the longest world
             /*
-                    var words, longestWord, highestNum;
-                    highestNum = 0;
-                    longestWord = '';
-                    function findLongestWordLength(str) {
-                      //convert string to array
-                      words = str.split(' ');
-                      //check world length
-                      for(let word of words){
-                        getWordLength = word.length;
-                        if (getWordLength > highestNum){
-                          highestNum = getWordLength;
-                          longestWord = word;
-                        }
-                      }
-                      console.log(longestWord);
-                      return longestWord;
-                    }
+                                 var words, longestWord, highestNum;
+                                 highestNum = 0;
+                                 longestWord = '';
+                                 function findLongestWordLength(str) {
+                                   //convert string to array
+                                   words = str.split(' ');
+                                   //check world length
+                                   for(let word of words){
+                                     getWordLength = word.length;
+                                     if (getWordLength > highestNum){
+                                       highestNum = getWordLength;
+                                       longestWord = word;
+                                     }
+                                   }
+                                   console.log(longestWord);
+                                   return longestWord;
+                                 }
 
-                    findLongestWordLength("The quick brown fox jumped over the lazy dog");
+                                 findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 
-                // Solution N2
-                function findLongestWordLength2(str) {
-                  return Math.max(...str.split(" ").map(word => word.length));
-                }
+                             // Solution N2
+                             function findLongestWordLength2(str) {
+                               return Math.max(...str.split(" ").map(word => word.length));
+                             }
 
-                findLongestWordLength2("The quick brown fox jumped over the lazy dog");
-                */
+                             findLongestWordLength2("The quick brown fox jumped over the lazy dog");
+                             */
 
             //Basic Algorithm Scripting: ***********************************************
 
@@ -469,81 +469,97 @@
 
             // ************************************************** use-the-delete-keyword-to-remove-object-properties
 
-//             let foods = {
-//                 apples: 25,
-//                 oranges: 32,
-//                 plums: 28,
-//                 bananas: 13,
-//                 grapes: 35,
-//                 strawberries: 27,
-//             };
+            //             let foods = {
+            //                 apples: 25,
+            //                 oranges: 32,
+            //                 plums: 28,
+            //                 bananas: 13,
+            //                 grapes: 35,
+            //                 strawberries: 27,
+            //             };
 
-//             // Only change code below this line
-//             function deleteObj(obj, ...props) {
-//                 props.forEach((prop) => {
-//                     delete obj[prop];
-//                 });
-//             }
-//             deleteObj(foods, "oranges", "plums", "strawberries");
-//             // Only change code above this line
+            //             // Only change code below this line
+            //             function deleteObj(obj, ...props) {
+            //                 props.forEach((prop) => {
+            //                     delete obj[prop];
+            //                 });
+            //             }
+            //             deleteObj(foods, "oranges", "plums", "strawberries");
+            //             // Only change code above this line
 
-//             // The global variable
-// console.log(foods);
+            //             // The global variable
+            // console.log(foods);
 
+            // The variable watchList holds an array of objects with information on several movies. Use reduce to find the average IMDB rating of the movies directed by Christopher Nolan. Recall from prior challenges how to filter data and map over it to pull what you need. You may need to create other variables, and return the average rating from getRating function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
 
-// The variable watchList holds an array of objects with information on several movies. Use reduce to find the average IMDB rating of the movies directed by Christopher Nolan. Recall from prior challenges how to filter data and map over it to pull what you need. You may need to create other variables, and return the average rating from getRating function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
+            // function getRating(watchList){
+            //   // Only change code below this line
+            //   var averageRating;
+            //   const newList = watchList
+            //   .map(list => ({ director: list.Director, rating: list.imdbRating }))
+            //   .filter(list => list.director  == "Christopher Nolan" );
+            //   averageRating = newList.reduce((sum, list) => sum + parseFloat(list.rating), 0)/newList.length;
 
-// function getRating(watchList){
-//   // Only change code below this line
-//   var averageRating;
-//   const newList = watchList
-//   .map(list => ({ director: list.Director, rating: list.imdbRating }))
-//   .filter(list => list.director  == "Christopher Nolan" );
-//   averageRating = newList.reduce((sum, list) => sum + parseFloat(list.rating), 0)/newList.length;
+            //   console.log(newList);
+            //   // Only change code above this line
+            //   return averageRating;
+            // }
 
-//   console.log(newList);
-//   // Only change code above this line
-//   return averageRating;
-// }
+            // console.log(getRating(watchList));
 
-// console.log(getRating(watchList));
+            // You need to complete the code for the squareList function using any combination of map(), filter(), and reduce() so that it returns a new array containing only the square of only the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it. An example of an array containing only real numbers is [-3, 4.8, 5, 3, -3.2].
 
+            // const squareList = (arr) => {
+            //   // Only change code below this line
+            // // if (num > 0 && Number.isInteger(num)){
+            // // }
+            // const newNum = arr.filter(num => num > 0)
+            // .filter(num => Number.isInteger(num))
+            // .reduce((memo, value) => {
+            //   memo.push(value * value)
+            //   return memo
+            // //  return (memo + value) * value;
+            // },[])
+            // console.log(newNum)
+            //   return newNum;
+            //   // Only change code above this line
+            // };
 
+            // const squaredIntegers = squareList([-3, 4.8, 5, 3,7, -3.2]);
+            // console.log(squaredIntegers);
 
-// You need to complete the code for the squareList function using any combination of map(), filter(), and reduce() so that it returns a new array containing only the square of only the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it. An example of an array containing only real numbers is [-3, 4.8, 5, 3, -3.2].
+            // squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]) should return [16, 1764, 36].
 
-// const squareList = (arr) => {
-//   // Only change code below this line
-// // if (num > 0 && Number.isInteger(num)){
-// // }
-// const newNum = arr.filter(num => num > 0)
-// .filter(num => Number.isInteger(num))
-// .reduce((memo, value) => {
-//   memo.push(value * value)
-//   return memo
-// //  return (memo + value) * value;
-// },[])
-// console.log(newNum)
-//   return newNum;
-//   // Only change code above this line
-// };
+            // Functional Programming: Apply Functional Programming to Convert Strings to URL Slugs *********************************
+            // The global variable
+            // var globalTitle = "Winter Is Coming";
+            // // Only change code below this line
+            // function urlSlug(title) {
+            // let newTitle = title.trim();
+            // return newTitle.split(/\s+/g).join("-").toLowerCase();
+            // }
 
-// const squaredIntegers = squareList([-3, 4.8, 5, 3,7, -3.2]);
-// console.log(squaredIntegers); 
+            // urlSlug("Winter Is Coming") //should return "winter-is-coming".
 
-// squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]) should return [16, 1764, 36].
+            // Intermediate Algorithm Scripting: Diff Two Arrays **********************
+            // Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
 
-// Functional Programming: Apply Functional Programming to Convert Strings to URL Slugs *********************************
-// The global variable
-var globalTitle = "Winter Is Coming";
-// Only change code below this line
-function urlSlug(title) {
-let newTitle = title.trim();
-return newTitle.split(/\s+/g).join("-").toLowerCase();
-}
+            // Note
+            // You can return the array with its elements in any order.
 
-urlSlug("Winter Is Coming") //should return "winter-is-coming".
+            function diffArray(arr1, arr2) {
+                let newArr = arr1
+                    .concat(arr2)
+                    .filter(
+                        (item) => !arr1.includes(item) || !arr2.includes(item)
+                    );
+                console.log(newArr);
+            }
 
+            diffArray(
+                ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
+                ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+            ); //should return ["diorite", "pink wool"].
         </script>
     </body>
 </html>
