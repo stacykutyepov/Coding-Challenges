@@ -1,9 +1,9 @@
 # Coding-Challange
 
-Learning JS &amp; Coding-Challenges
+Learning JS ; Coding-Challenges
 
-Here I store my coding challanges and a process
+Here I store solved coding challanges and the learning process.
 
-JS-Basics & JS-Basics 02: contain Basic Topics of JavaScript;
+JS-Basics & JS-Basics 02 - Basic Topics of JavaScrip.
 
-JSalgorithmsSolved: are challenges from FreeCodeCamp Javascript Algorithms and Data Structures Course;
+In src file, there are challenges from FreeCodeCamp Javascript Algorithms and Data Structures Course;
