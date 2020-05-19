@@ -5,12 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Asynchronous JavaScript</title>
+    <script src="https://unpkg.com/ityped@1.0.3" type="text/javascript"> </script>
     </head>
 
     <body>
-        <h1>Asynchronous JavaScript</h1>
+        <div>
+            <span id="ityped">Asynchronous JavaScript</span>
+        </div>
 
         <script>
+            const iTyped = document.getElementById("ityped");
+
+            if (iTyped) {
+              debugger
+                ityped.init(iTyped, {
+                    strings: 'kissa molodec',
+                    typeSpeed: 150,
+                    backDelay: 5000,
+                });
+            }
             //new challenge*
 
             // Take a look at the object we've provided in the code editor. The user object contains three keys. The data key contains five keys, one of which contains an array of friends. From this, you can see how flexible objects are as data structures. We've started writing a function addFriend. Finish writing it so that it takes a user object and adds the name of the friend argument to the array stored in user.data.friends and returns that array.
@@ -580,43 +593,45 @@
             //*************************************Intermediate Algorithm Scripting: Wherefore art thou
             // Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
 
-            function whatIsInAName(collection, source) {
-                var arr = [];
-                // Only change code below this line
-                const arrSource = Object.entries(source);
-                for (let obj of collection) {
-                    let flag = true;
-                    for (let [key, value] of arrSource) {
-                        if (obj[key] !== value) {
-                            flag = false;
-                        }
-                    }
-                    if (flag == true) {
-                        arr.push(obj);
-                    }
-                }
-                // Only change code above this line
-                return arr;
-            }
+            // function whatIsInAName(collection, source) {
+            //     var arr = [];
+            //     // Only change code below this line
+            //     const arrSource = Object.entries(source);
+            //     for (let obj of collection) {
+            //         let flag = true;
+            //         for (let [key, value] of arrSource) {
+            //             if (obj[key] !== value) {
+            //                 flag = false;
+            //             }
+            //         }
+            //         if (flag == true) {
+            //             arr.push(obj);
+            //         }
+            //     }
+            //     // Only change code above this line
+            //     return arr;
+            // }
+
+            // // whatIsInAName(
+            // //     [
+            // //         { first: "Romeo", last: "Montague" },
+            // //         { first: "Mercutio", last: null },
+            // //         { first: "Tybalt", last: "Capulet" },
+            // //     ],
+            // //     { last: "Capulet" }
+            // // );
 
             // whatIsInAName(
             //     [
-            //         { first: "Romeo", last: "Montague" },
-            //         { first: "Mercutio", last: null },
-            //         { first: "Tybalt", last: "Capulet" },
+            //         { apple: 1, bat: 2 },
+            //         { bat: 2 },
+            //         { apple: 1, bat: 2, cookie: 2 },
             //     ],
-            //     { last: "Capulet" }
-            // );
+            //     { apple: 1, bat: 2 }
+            // ); //should return
+            // // [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]
 
-            whatIsInAName(
-                [
-                    { apple: 1, bat: 2 },
-                    { bat: 2 },
-                    { apple: 1, bat: 2, cookie: 2 },
-                ],
-                { apple: 1, bat: 2 }
-            ); //should return
-            // [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]
+            
         </script>
     </body>
 </html>
