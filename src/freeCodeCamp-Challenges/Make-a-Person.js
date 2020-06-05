@@ -37,3 +37,9 @@ var Person = function (firstAndLast) {
 var bob = new Person('Bob Ross');
 bob.getFullName();
 
+
+let salaries = {
+    'John': 100,
+    'Pete': 300,
+    'Mary': 250
+}
