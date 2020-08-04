@@ -31,7 +31,7 @@ telephoneCheck("555-555-5555");
 // \d{3}[\s\-]? - matches digits, they should be {3}, and matches space or a dash, and ? means it's optional
 // \d{4}$ - matches digits, they should be {4}, and $ means at the end of a string
 
-
+/* TEST */
 telephoneCheck("555-5555");// should return false.
 telephoneCheck("5555555");//should return false.
 telephoneCheck("1 555)555-5555");// should return false.
