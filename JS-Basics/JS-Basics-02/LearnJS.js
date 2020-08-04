@@ -56,7 +56,7 @@ function third(){
  var d = 'John';
  console.log(a + d);
 }
- 
+
 
 
 */
@@ -64,38 +64,38 @@ function third(){
 
 //console.log(this);
 
-calcAge(1994);
+// calcAge(1994);
 
-function calcAge(year){
- console.log(2020-year);
- console.log(this);
-}
+// function calcAge(year){
+//  console.log(2020-year);
+//  console.log(this);
+// }
 
 
-var john = {
- name: 'John',
- yearOfBirth: 1990,
- calcAge: function(){
-  console.log(this);
-  console.log(2020- this.yearOfBirth);
-/*
-  function innerFunction(){
-   console.log(this);
-  }
-  innerFunction();*/
- }
-}
-john.calcAge();
+// var john = {
+//  name: 'John',
+//  yearOfBirth: 1990,
+//  calcAge: function(){
+//   console.log(this);
+//   console.log(2020- this.yearOfBirth);
+// /*
+//   function innerFunction(){
+//    console.log(this);
+//   }
+//   innerFunction();*/
+//  }
+// }
+// john.calcAge();
 
-// Method borrowing
+// // Method borrowing
 
-var mike ={
- name: 'Mike',
- yearOfBirth: 1994
-};
+// var mike ={
+//  name: 'Mike',
+//  yearOfBirth: 1994
+// };
 
-mike.calcAge = john.calcAge;
-mike.calcAge();
+// mike.calcAge = john.calcAge;
+// mike.calcAge();
 
 
 // DOM Manipulations
